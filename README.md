@@ -12,3 +12,8 @@ ghostkit/rootkit: ghostkit is going to be more advanced, compared to user friend
 200-299: stable
 300+: stable + many features
 
+### games/applications
+you can build something on top of ivy. here is a minifed example of a guess the number game: (run command inside of ivy)
+```
+directjs~var gue=Math.floor(Math.random()*101)+"";Commands.newNum=new Command("guess:newnum",function(p){gue=Math.floor(Math.random()*101)+"";pmessage("made new number", "special", "guess/newnum")},"create a new number");Commands.newNum.aC();Commands.guessNum=new Command("guess:guessnum",function(p){if(p==gue){pmessage("correct", "alert", "guess/guessnum")} else {pmessage("wrong","alert","guess/guessnum"}}, "");Commands.guessNum.aC();
+```
