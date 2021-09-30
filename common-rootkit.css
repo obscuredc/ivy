@@ -1,0 +1,76 @@
+body {
+    background-color: black;
+    color: limegreen;
+    font-family: "Roboto Mono", monospace;
+}
+
+h1,h2,h3,h4,h5,h6,button,label {
+    color: orange;
+    background-color: black;
+    border-color: black;
+    border-style: none;
+    transition: background-color 4s;
+}
+#version {
+    color: lightblue;
+    background-color: black;
+}
+/* console */
+#console {
+    color: limegreen;
+    width: 100%;
+    height: 100%;
+    background-color: darkslateblue;
+
+    border-color: darkslateblue;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+}
+#console-message {
+    color: limegreen;
+    border-color: darkslateblue;
+    background-color: black;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    max-width: 1500px;
+    height: 500px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#console-IO {
+    color: limegreen;
+    border-color: darkslateblue;
+    background-color: black;
+    border-width: 3px;
+    border-radius: 5px;
+    border-style: solid;
+}
+/** expose special classes for terminal plugins if you want idk **/
+.normal {
+    color: limegreen;
+    font-family: "Roboto Mono", monospace;
+    background-color: black;
+}
+.special {
+    color: darkslateblue;
+    font-family: "Roboto Mono", monospace;
+    background-color: black;
+}
+.alert {
+    color: darkred;
+    font-family: "Roboto Mono", monospace;
+    background-color: black;
+}
+.special2 {
+    color: orange;
+    font-family: "Roboto Mono", monospace;
+    background-color: black;
+}
+.specialchar {
+    color: purple;
+    font-family: "Roboto Mono", monospace;
+    background-color: black;
+}
