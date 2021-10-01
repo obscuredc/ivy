@@ -1,5 +1,5 @@
 /** on initialization */
-const version = "ivy:rootkit.102";
+const version = "ivy:rootkit.103";
 window.onload = function() {
     document.getElementById("elem-title").innerHTML = version;
     document.getElementById("elem-version").innerHTML = version;    
@@ -24,6 +24,7 @@ var currentcommand = "";
 var VoidKeyboard = document.getElementById("IOe");
 
 document.addEventListener("keydown", function(ev) {
+    
     switch(ev.key) {
         case "Enter":
             executeCommand(currentcommand);
@@ -45,10 +46,12 @@ document.addEventListener("keydown", function(ev) {
         case "Tab":
             break;
         default:
-            currentcommand += ev.key;
+            if(currentcommand.length < 141 ) {
+                currentcommand += ev.key;
+            }
             updateVoidKeyboard(currentcommand);
             break;
-    }
+}
 });
 function updateVoidKeyboard(word) {
     VoidKeyboard.innerText = word;
@@ -137,4 +140,24 @@ function cpyRead() {
     updateVoidKeyboard(currentcommand);
     executeCommand("clear");
     executeCommand(m);
+}
+
+Commands.HREF = new Command("href", function(p) {
+    pmessage(`<br>current href:\`${window.location.href}\``, "normal", "native/href");
+}, "get rootkit's current location on the computer")
+Commands.HREF.aC();
+
+/** rootkit expose API */
+var terminalLocal=0;
+var Terminal = {
+    Message: pmessage,
+    Clear: function() {
+        Console.innerHTML = "";
+    },
+    AddCommand: function(name, onexecute, desc) {
+        new Command(name, onexecute, desc).aC();
+    },
+    ExecuteCommand: function(name) {
+        executeCommand(name);
+    }
 }
