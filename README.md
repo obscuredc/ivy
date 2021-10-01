@@ -7,10 +7,15 @@ for now, just add more commands. if you want a new command, open a issue and tel
 I will accept pull requests for useful features.
 
 ### versions
-ghostkit/rootkit: ghostkit is going to be more advanced, compared to user friendly root kit, but im still working on it so..
-100-199: alpha release versions
-200-299: stable
-300+: stable + many features
+##### versions types
+ghostkit/rootkit: ghostkit is going to be more advanced, compared to user friendly rootkit. ghostkit will be released later.
+##### versions numbers
+* 100-199: alpha release versions
+* 200-299: stable
+* 300+: stable + many features
+##### versions format
+"ivy:\[ghost/root\]kit.xyz"
+<br>where xyz is the versions numbers.
 
 ### games/applications
 you can build something on top of ivy. here is a minifed example of a guess the number game: (run command inside of ivy using `exe as cpy`)
