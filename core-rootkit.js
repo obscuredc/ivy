@@ -124,3 +124,17 @@ Commands.Version = new Command("version", function (p) {
     pmessage(version, "special", "native/version");
 }, "get version info of ivy kit")
 Commands.Version.aC();
+
+Commands.TextAreaCMD = new Command("exe as cpy", function(p) {
+    pmessage(`<textarea id="cpy-input"></textarea>`, "normal", "native/cpy");
+    pmessage(`<button id="cpy-button" onclick="cpyRead()">[SUBMIT]</button>`, "normal", "native/cpy");
+}, "paste in a command")
+Commands.TextAreaCMD.aC();
+
+function cpyRead() {
+    var m = document.getElementById("cpy-input").value;
+    currentcommand="";
+    updateVoidKeyboard(currentcommand);
+    executeCommand("clear");
+    executeCommand(m);
+}
