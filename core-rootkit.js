@@ -1,5 +1,5 @@
 /** on initialization */
-const version = "ivy:rootkit.100";
+const version = "ivy:rootkit.102";
 window.onload = function() {
     document.getElementById("elem-title").innerHTML = version;
     document.getElementById("elem-version").innerHTML = version;    
